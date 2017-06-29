@@ -1,6 +1,6 @@
 {
   "name": "rabin",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "node native bindings to a C rabin fingerprinting algorithm",
   "main": "index.js",
   "bin": {
@@ -17,8 +17,8 @@
     "rsync"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "prebuild --install",
+    "test": "echo \"It built! Add more tests later.\" && prebuild-ci",
+    "install": "prebuild-install || node-gyp rebuild",
     "prebuild": "prebuild --all --strip --verbose"
   },
   "gypfile": true,
@@ -30,16 +30,19 @@
     "debug": "^2.2.0",
     "minimist": "^1.2.0",
     "nan": "^2.1.0",
-    "prebuild": "^4.1.2",
+    "prebuild-install": "^2.1.0",
     "readable-stream": "^2.0.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prebuild": "^6.0.2",
+    "prebuild-ci": "^2.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxogden/rabin.git"
+    "url": "git+https://github.com/datproject/rabin.git"
   },
   "bugs": {
-    "url": "https://github.com/maxogden/rabin/issues"
+    "url": "https://github.com/datproject/rabin/issues"
   },
-  "homepage": "https://github.com/maxogden/rabin#readme"
+  "homepage": "https://github.com/datproject/rabin#readme"
 }
